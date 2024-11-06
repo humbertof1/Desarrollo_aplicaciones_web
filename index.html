@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Remisiones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gestión de Remisiones</h1>
+
+    <section>
+        <h2>Registro de Remisión</h2>
+        <label for="remitente-nombre">Nombre del Remitente:</label>
+        <input type="text" id="remitente-nombre" required>
+
+        <label for="destinatario-nombre">Nombre del Destinatario:</label>
+        <input type="text" id="destinatario-nombre" required>
+
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" required>
+
+        <label for="peso">Peso:</label>
+        <input type="number" id="peso" required>
+
+        <label for="dimensiones">Dimensiones (LxAxH):</label>
+        <input type="text" id="dimensiones" required>
+
+        <label for="fecha-salida">Fecha de Salida (dd/mm/yyyy):</label>
+        <input type="text" id="fecha-salida" required>
+
+        <label for="fecha-llegada">Fecha de Llegada (dd/mm/yyyy):</label>
+        <input type="text" id="fecha-llegada" required>
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" required>
+
+        <button id="registrar-btn">Registrar</button>
+    </section>
+
+    <section>
+        <h2>Consulta de Tareas</h2>
+        <label for="filtro-estatus">Filtrar por Estatus:</label>
+        <select id="filtro-estatus">
+            <option value="Todos">Todos</option>
+            <option value="Por hacer">Por hacer</option>
+            <option value="En progreso">En progreso</option>
+            <option value="Rechazado">Rechazado</option>
+            <option value="Cancelado">Cancelado</option>
+            <option value="Cerrado">Cerrado</option>
+            <option value="En pruebas de calidad">En pruebas de calidad</option>
+            <option value="En validación por el usuario">En validación por el usuario</option>
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Remitente</th>
+                    <th>Destinatario</th>
+                    <th>Descripción</th>
+                    <th>Peso</th>
+                    <th>Dimensiones</th>
+                    <th>Fecha de Salida</th>
+                    <th>Fecha de Llegada</th>
+                    <th>Precio</th>
+                    <th>Estatus</th>
+                    <th>Comentarios</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-cuerpo">
+                <!-- Las filas se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Modificar Tarea</h2>
+        <label for="estatus-modificar">Estatus:</label>
+        <select id="estatus-modificar">
+            <option value="En progreso">En progreso</option>
+            <option value="Rechazado">Rechazado</option>
+            <option value="Cancelado">Cancelado</option>
+            <option value="Cerrado">Cerrado</option>
+            <option value="En pruebas de calidad">En pruebas de calidad</option>
+            <option value="En validación por el usuario">En validación por el usuario</option>
+            <option value="En proceso de liberación">En proceso de liberación</option>
+        </select>
+
+        <label for="nuevo-comentario">Nuevo Comentario:</label>
+        <input type="text" id="nuevo-comentario">
+
+        <button id="actualizar-btn">Actualizar Tarea</button>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
